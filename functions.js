@@ -4,6 +4,10 @@
  * @return {string} the number as a string
  */
 
+function numberToString(num) {
+  return num.toString();
+}
+
 
 /**
  * Adds one to a given number.
@@ -11,6 +15,9 @@
  * @return {number}
  */
 
+function increase(num) {
+  return num + 1;
+}
 
 /**
  * Subtracts one from a given number.
@@ -18,6 +25,9 @@
  * @return {number}
  */
 
+function decrease(num) {
+  return num - 1;
+}
 
 /**
  * Adds two numbers.
@@ -26,6 +36,9 @@
  * @return {number} the sum
  */
 
+function add(x, y) {
+  return x + y;
+}
 
 /**
  * Subtracts the second number from the first.
@@ -34,6 +47,9 @@
  * @return {number} the difference
  */
 
+function subtract(x, y) {
+  return x - y;
+}
 
 /**
  * Multiplies two numbers.
@@ -42,6 +58,9 @@
  * @return {number} the product
  */
 
+function multiply(x, y) {
+  return x * y;
+}
 
 /**
  * Divides the first number by the second.
@@ -50,6 +69,9 @@
  * @return {number} the quotient
  */
 
+function divide(x, y) {
+  return x/y;
+}
 
 /**
  * Multiplies a number by itself.
@@ -57,6 +79,9 @@
  * @return {number} squared
  */
 
+function square(num) {
+  return num**2;
+}
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -67,6 +92,32 @@
  * @return {number} the result
  */
 
+function calculate(op, x, y) {
+  var res;
+  var output;
+  switch (op) {
+    case 'add':
+      res = add(x, y);
+      output = `${x} + ${y} = ${res}`;
+      break;
+    case 'subtract':
+      res = subtract(x, y);
+      output = `${x} - ${y} = ${res}`;
+      break;
+    case 'multiply':
+      res = multiply(x, y);
+      output = `${x} * ${y} = ${res}`;
+      break;
+    case 'divide':
+      res = divide(x, y);
+      output = `${x} / ${y} = ${res}`;
+      break;
+    default:
+  }
+
+  console.log(output);
+  return res;
+}
 
 /**
  * Returns true if `a` is greater than `b`.
